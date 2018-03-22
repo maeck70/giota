@@ -43,7 +43,7 @@ func testPowCARM64(t *testing.T) float64 {
 
 	tx = tx[:len(tx)-NonceTrinarySize/3] + nonce
 	h := tx.Hash()
-	if h[len(h)-4:] != "99999" {
+	if h[len(h)-5:] != "99999" {
 		t.Error("pow is illegal", h)
 	}
 
